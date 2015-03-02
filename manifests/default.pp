@@ -9,7 +9,7 @@ service{"apache2":
 	ensure => "running",
 	require => Package["apache2"],
 }
-file{"/var/www/project1";
+file{"/var/www/project1":
 	ensure => "link",
 	target => "/vagrant/project1",
 	require => Package["apache2"],
